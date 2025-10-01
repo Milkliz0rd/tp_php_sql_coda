@@ -1,0 +1,7 @@
+.env
+vendor/
+node_modules/
+.idea/
+.vscode/
+.DS_Store
+src/config/config.local.php
