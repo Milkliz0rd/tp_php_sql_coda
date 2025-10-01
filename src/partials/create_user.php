@@ -1,3 +1,12 @@
+<!-- Partie de vérification de connexion -->
+<?php
+require __DIR__ . '/../config/session.php';
+if (empty($_SESSION['user'])) {
+    header('Location: ./login.php'); // Redirige vers la page de connexion si non connecté
+    exit;
+} ?> 
+
+
 <?php require __DIR__ . '/../config/db.php'; ?>
 <?php require __DIR__ . '/head.php'; ?>
 <?php require __DIR__ . '/header.php'; ?>

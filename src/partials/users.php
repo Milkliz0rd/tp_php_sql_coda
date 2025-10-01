@@ -1,8 +1,16 @@
-<?php require __DIR__ . '/head.php'; ?>
-<?php require __DIR__ . '/header.php'; ?>
-<?php require __DIR__ . '/../config/db.php'; ?>
+<!-- Partie de vérification de connexion -->
+<?php
+require __DIR__ . '/../config/session.php';
+if (empty($_SESSION['user'])) {
+    header('Location: ./login.php'); // Redirige vers la page de connexion si non connecté
+    exit;
+} ?> 
 
 <?php
+require __DIR__ . '/head.php'; 
+require __DIR__ . '/header.php';
+require __DIR__ . '/../config/db.php'; 
+
 $userStatement = $sqlClient->query("SELECT * FROM users ORDER BY id ASC"); //Préparation de la requête SQL pour récupérer tous les utilisateurs de la table "users" triés par ordre croissant d'ID
 $users= $userStatement->fetchAll() ; //Exécution de la requête SQL et récupération de tous les résultats dans un tableau associatif
 ?>

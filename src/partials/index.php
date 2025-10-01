@@ -1,5 +1,6 @@
-<?php require __DIR__ . '/head.php'; ?>
-<?php require __DIR__ . '/header.php'; ?>
+<?php require __DIR__ . '/../config/session.php';
+require __DIR__ . '/head.php'; 
+require __DIR__ . '/header.php'; ?>
 
 <!-- Landing Page -->
     <div class="flex flex-col bg-white gap-8 m-auto mt-20 border p-10 rounded-lg shadow-lg max-w-4xl">
